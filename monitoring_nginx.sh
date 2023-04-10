@@ -18,7 +18,7 @@ error=error.log
 if [ -f output*.log ]; then
 	s_date=`date -d '1 hour ago' "+%Y-%m-%d"`
 	s_time=`date -d '1 hour ago' "+%H:%M:%S"`
-echo "NGINX LOG: $s_date $s_time" >> $OUTPUT
+echo "NGINX LOG DATE: $s_date $s_time" >> $OUTPUT
 else
 	s_date=`ls -alt --full-time output* | head -n 1 | awk '{print $6}'` #s_date="2023-04-10"
 
@@ -41,7 +41,7 @@ s/-10-/\/Oct\//
 s/-11-/\/Nov\//
 s/-12-/\/Dec\//'
 }`:$s_time"
-echo "ACCESS: $s_acl"
+echo "NEW DATE FORMAT: $s_acl"
 
 # Список IP адресов
 echo "######################## Список IP адресов с наибольшим кол-вом запросов и с указанием кол-ва запросов c момента последнего запуска скрипта ########################" >> $OUTPUT
