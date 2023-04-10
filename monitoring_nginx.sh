@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 # Блокировка запуска нескольких копий
 LOCK=/tmp/monitoring.lock
