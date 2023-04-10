@@ -25,7 +25,8 @@ else
 	s_time=`ls -alt --full-time output* | head -n 1 | awk '{print $7}' | cut -f1 -d"."` #s_time="11:51:05"
 fi
 
-s_acl="`echo $s_date | awk -F "-" '{print $3,$2,$1}' | sed 's/ /-/g' | { # Замена месяца. Вид 10/Apr/2023
+# Замена месяца. Вид 10/Apr/2023
+s_acl="`echo $s_date | awk -F "-" '{print $3,$2,$1}' | sed 's/ /-/g' | {
 sed -e '
 s/-01-/\/Jan\//
 s/-02-/\/Feb\//
